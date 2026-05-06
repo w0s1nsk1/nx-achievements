@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "title_id": "0100000000000001",
+  "game": {"name": "Minimal Game", "developer": "Community"},
+  "supported_versions": [],
+  "achievements": [
+    {
+      "id": "boot",
+      "name": "Boot",
+      "description": "Launch the game once.",
+      "badge": "leaf",
+      "hidden": false,
+      "conditions": [{"type": "state_equals", "key": "booted", "value": true}]
+    }
+  ]
+}

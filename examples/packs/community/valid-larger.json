@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "title_id": "0100000000000002",
+  "game": {"name": "Larger Game", "developer": "Community"},
+  "supported_versions": [{"game_version":"1.0.0","build_id":"ABCDEF12"}],
+  "achievements": [
+    {"id":"a1","name":"Leaf One","description":"Start","badge":"leaf","hidden":false,"conditions":[{"type":"state_equals","key":"started","value":true}]},
+    {"id":"a2","name":"Compass Two","description":"Reach level 10","badge":"compass","hidden":false,"conditions":[{"type":"state_greater_than","key":"level","value":9}]},
+    {"id":"a3","name":"Bonfire Three","description":"Take low damage","badge":"bonfire","hidden":false,"conditions":[{"type":"state_less_than","key":"damage","value":5}]},
+    {"id":"a4","name":"Star Four","description":"Set flag bit 2","badge":"star","hidden":true,"conditions":[{"type":"state_bit_set","key":"flags","value":2}]}
+  ]
+}

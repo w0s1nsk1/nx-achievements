@@ -1,0 +1,31 @@
+# Build artifacts
+build/
+cmake-build-*/
+
+# Runtime temp/profile outputs
+tmp/
+
+# Binaries
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+/nxachievements-test
+/nxachievements-tests
+
+# Keep source directory tracked
+!tools/nxachievements-test/
+!tools/nxachievements-test/main.cpp
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# System
+.DS_Store
+Thumbs.db

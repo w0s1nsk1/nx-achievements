@@ -1,0 +1,11 @@
+{
+  "title_id": "bad",
+  "game": {"name": "Broken", "developer": "Community"},
+  "achievements": [
+    {
+      "name": "No ID",
+      "badge": "diamond",
+      "conditions": [{"key": "x", "value": true}]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "title_id": "0100000000000003",
+  "game": {"name": "Unknown Fields Game", "developer": "Community"},
+  "test": true,
+  "supported_versions": [],
+  "achievements": [
+    {
+      "id": "u1",
+      "name": "Unknown Root Demo",
+      "description": "Has extra root fields.",
+      "badge": "leaf",
+      "hidden": false,
+      "conditions": [{"type": "state_equals", "key": "ok", "value": true}],
+      "extra_note": "should warn"
+    }
+  ]
+}

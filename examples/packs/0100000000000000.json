@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "title_id": "0100000000000000",
+  "game": {
+    "name": "Example Game",
+    "developer": "Example Developer"
+  },
+  "supported_versions": [
+    {
+      "game_version": "1.0.0",
+      "build_id": "EXAMPLEBUILDID"
+    }
+  ],
+  "achievements": [
+    {
+      "id": "first_steps",
+      "name": "First Steps",
+      "description": "Start your first adventure.",
+      "badge": "leaf",
+      "hidden": false,
+      "conditions": [
+        {
+          "type": "state_equals",
+          "key": "has_started_game",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": "rookie_level",
+      "name": "Rookie",
+      "description": "Reach level above 3.",
+      "badge": "compass",
+      "hidden": false,
+      "conditions": [
+        {
+          "type": "state_greater_than",
+          "key": "player_level",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "bit_flag_on",
+      "name": "Flag Hunter",
+      "description": "Enable bit #2 in flags state.",
+      "badge": "bonfire",
+      "hidden": false,
+      "conditions": [
+        {
+          "type": "state_bit_set",
+          "key": "flags",
+          "value": 2
+        }
+      ]
+    }
+  ]
+}
