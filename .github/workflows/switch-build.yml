@@ -1,0 +1,41 @@
+name: Switch Build (.nro)
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build-switch-viewer:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup devkitPro + libnx
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget gpg
+          wget https://apt.devkitpro.org/install-devkitpro-pacman
+          chmod +x install-devkitpro-pacman
+          sudo ./install-devkitpro-pacman
+          sudo dkp-pacman -Syu --noconfirm
+          sudo dkp-pacman -S --noconfirm switch-dev switch-tools
+
+      - name: Build switch-viewer
+        run: |
+          export DEVKITPRO=/opt/devkitpro
+          export DEVKITARM=${DEVKITPRO}/devkitARM
+          export DEVKITA64=${DEVKITPRO}/devkitA64
+          export PATH=${DEVKITPRO}/tools/bin:${DEVKITA64}/bin:${PATH}
+          cd switch-viewer
+          make
+
+      - name: Upload .nro artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: NXAchievements-nro-${{ github.ref_name }}
+          path: switch-viewer/NXAchievements.nro
+          if-no-files-found: error

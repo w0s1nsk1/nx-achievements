@@ -34,7 +34,7 @@ A minimal, local achievement framework for Nintendo Switch CFW/Homebrew.
 - `switch-viewer/` – prosty shell pod przyszłe libnx
 
 ## Build (CMake)
-Wymagania: CMake 3.16+, kompilator z C++17.
+Requirements: CMake 3.16+ and a C++17 compiler.
 
 ```bash
 cd NXAchievements
